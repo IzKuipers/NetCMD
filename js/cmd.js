@@ -92,8 +92,8 @@ class commands {
             } else {
                 userInterfaceClass.outputColor(`Contents of [${directory}]`, ``, `var(--blue)`);
                 for (let i = 0; i < files.length; i++) {
-                    if (new commands().isDir(`${directory}\\${files[i]}`)) {
-                        foldList += `<span class="material-icons folder">folder</span> [${files[i]}\\]<br>`;
+                    if (new commands().isDir(`${directory}/${files[i]}`)) {
+                        foldList += `<span class="material-icons folder">folder</span> [${files[i]}/]<br>`;
                     } else {
                         fileList += `<span class="material-icons file">description</span> ${files[i]}<br>`;
                     }
@@ -130,7 +130,7 @@ class commands {
                 newPath += `${globalCommandList[i]} `;
             } else { newPath += globalCommandList[i]; }
         }
-        if (newPath !== "\\") {
+        if (newPath !== "/" ) {
             if (this.isDir(path.join(currentDir, newPath))) {
                 currentDir = path.join(currentDir, newPath);
             } else if (this.isDir(newPath)) {
@@ -139,7 +139,7 @@ class commands {
                 userInterfaceClass.output(`Unable to change the directory.\nReason:"${newPath}" could not be found.`)
             }
         } else {
-            currentDir = "\\";
+            currentDir = newPath;
         }
         userInterfaceClass.prompt();
     }
@@ -158,8 +158,8 @@ class commands {
             file += `${globalCommandList[i]} `;
         }
         file = file.trim();
-        if (!this.isFile(file) && this.isFile(`${currentDir}\\${file}`)) {
-            file = `${currentDir}\\${file}`;
+        if (!this.isFile(file) && this.isFile(`${currentDir}/${file}`)) {
+            file = `${currentDir}/${file}`;
         }
         fs.readFile(file, {encoding:"utf-8"}, (err, data) => {
             if (err || !data) {
