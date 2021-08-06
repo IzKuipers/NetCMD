@@ -1,0 +1,16 @@
+:root {
+    --fontSize: 18px;
+    --cursor: none;
+    --backgroundColor: rgb(46, 52, 64);
+    --color: rgb(216, 222, 233);
+    --bodyPadding: 1em;
+    --cursor: none;
+    --red: #bf616a;
+    --green: #a3be8b;
+    --yellow: #ebcb8b;
+    --blue: #5e81ac;
+    --purple: #b48ead;
+    --aqua: #8fbcbb;
+    --gray: rgb(109, 109, 109);
+    --orange: #d0a770;
+}

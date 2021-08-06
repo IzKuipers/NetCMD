@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+ :root {
+    --fontSize: 18px;
+    --cursor: none;
+    --backgroundColor: #000;
+    --color: #fff;
+    --bodyPadding: 1em;
+    --cursor: none;
+    --red: #f00;
+    --green: #0f0;
+    --yellow: #ff0;
+    --blue: #00f;
+    --purple: #a0f;
+    --aqua: #afa;
+    --gray: #444;
+    --orange: #ff7b00;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: var(--color);
+    padding: var(--bodyPadding);
+}
+
+html,
+body {
+    user-select: none;
+    margin: 0px;
+}
+
+* {
+    outline: none !important;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    color: var(--color);
+    background-color: var(--backgroundColor);
+    border: none;
+    cursor: var(--cursor);
+    word-wrap: break-word;
+    font-weight: 200;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+}
+
+input {
+    width: calc(100% - 2em);
+}
+
+hr {
+    width: 100%;
+    border: var(--color) 1px solid;
+    margin: calc(1em / 2) 0;
+}
+
+span.material-icons {
+    outline: none !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: calc(var(--fontSize) - 4px);
+    color: var(--color);
+}
+
+span.material-icons.folder {
+    color: var(--yellow)
+}

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: commodore;
+    src: url("./c64.ttf");
+}
+
+:root {
+    --fontSize: 18px;
+    --cursor: none;
+    --backgroundColor: rgb(55, 57, 196);
+    --color: var(--blue);
+    --bodyPadding: 5px;
+    --cursor: none;
+    --red: #880000;
+    --green: #00cc55;
+    --yellow: #eeee77;
+    --blue: rgb(112, 124, 230);
+    --purple: #d3869b;
+    --aqua: #aaffee;
+    --gray: #777;
+    --orange: #dd8855;
+}
+
+* {
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: commodore;
+    text-transform: uppercase;
+}
+
+html {
+    background-color: var(--blue);
+}
+
+body {
+    top: 75px;
+    left: 75px;
+    position: fixed;
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+    overflow: scroll;
+}
+
+div#terminalBody {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
